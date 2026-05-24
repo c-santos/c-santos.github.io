@@ -1,0 +1,14 @@
+---
+const articles = Object.values(import.meta.glob('./*.md', { eager: true}));
+---
+<ul>
+{
+articles.map((article) =>
+<li>
+    <a href={article.url}>
+        {article.frontmatter.title}
+    </a>
+</li>
+)
+}
+</ul>

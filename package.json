@@ -1,0 +1,30 @@
+{
+  "name": "c-santos.github.io",
+  "version": "1.0.0",
+  "description": "my github page",
+  "homepage": "https://github.com/c-santos/c-santos.github.io#readme",
+  "bugs": {
+    "url": "https://github.com/c-santos/c-santos.github.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c-santos/c-santos.github.io.git"
+  },
+  "license": "ISC",
+  "author": "c-santos",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "preview": "astro preview",
+    "build": "astro build"
+  },
+  "dependencies": {
+    "@astrojs/react": "^5.0.5",
+    "@types/react": "^19.2.15",
+    "@types/react-dom": "^19.2.3",
+    "astro": "^6.3.7",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  }
+}
