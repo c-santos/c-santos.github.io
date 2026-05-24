@@ -1,18 +1,9 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
-const articles = Object.values(import.meta.glob('./*.md', { eager: true}));
+import ThoughtsList from './ThoughtsList.astro'
 ---
 <BaseLayout title={'Thoughts'}>
-    Here are my blogs and stuff.
-    <ul>
-    {
-    articles.map((article) =>
-    <li>
-        <a href={article.url}>
-            {article.frontmatter.title}
-        </a>
-    </li>
-    )
-    }
-    </ul>
+    <h2>My thoughts</h2>
+    Here are my thoughts and stuff.
+    <ThoughtsList />
 </BaseLayout>
