@@ -10,11 +10,15 @@ const style = Astro.routePattern === url ? 'current' : ''
 <style>
 a {
     text-decoration: none;
-    color: #2B2A28;
+    color: var(--text)
+}
+
+a:hover{
+    font-weight: bold;
 }
 
 a#current {
-    color: #C2593F;;
+    color: var(--accent-color-1);
     text-decoration: underline;
 }
 

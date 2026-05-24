@@ -3,7 +3,17 @@ import NavLink from './NavLink.astro'
 ---
 
 <nav>
-    <NavLink url="/" label='Home' />
-    <NavLink url="/thoughts" label='Thoughts' />
-    <NavLink url="/about" label='About' />
+    <div id='nav'>
+        <NavLink url="/" label='Home' />
+        <NavLink url="/thoughts" label='Thoughts' />
+        <NavLink url="/about" label='About' />
+    </div>
 </nav>
+
+<style>
+    #nav {
+        display: flex;
+        gap: 16px;
+        /* border: 1px solid red */
+    }
+</style>

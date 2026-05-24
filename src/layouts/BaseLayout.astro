@@ -1,18 +1,28 @@
 ---
+interface Props {
+    title: string;
+    disableHeader?: boolean;
+}
+
 import Navigation from '../components/Navigation.astro'
 import Footer from '../components/Footer.astro'
-const { title } = Astro.props
+import { Font } from 'astro:assets';
+
+const { title, disableHeader } = Astro.props
 ---
 
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, iniital-scale=1">
+        <Font cssVariable="--font-inter" />
+        <Font cssVariable="--font-literata" />
         <title>{title}</title>
     </head>
 
     <body>
         <Navigation />
+        {disableHeader ? null : <h2 id='header'>{title}</h2>}
         <slot />
         <Footer />
     </body>
@@ -23,8 +33,26 @@ const { title } = Astro.props
         margin: 12px auto;
         max-width: 1200px;
         padding: 0 2rem;
-        background: #F9F6F0;
-        color: #2B2A28;
-        --accent-color: #C2593F;
+        font-family: var(--font-literata);
+        --bg: #F9F6F0;
+        --text: #2B2A28;
+        --text-hl: #706E6A;
+        --accent-color-1: #C2593F;
+        --accent-color-2: #D48C2A;
+        --accent-color-3: #3B5940;
+
+        background: var(--bg);
+        color: var(--text);
+    }
+
+    ::selection{
+        background: var(--accent-color-3);
+        color: var(--bg);
+    }
+</style>
+<style>
+    h2#header {
+        font-family: var(--font-inter), system-ui, sans-serif;
+        color: var(--text)
     }
 </style>
