@@ -1,5 +1,6 @@
 ---
 title: Creating my blog page
+layout: ../../layouts/BaseLayout.astro
 ---
 # Creating my blog page
 

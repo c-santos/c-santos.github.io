@@ -1,0 +1,14 @@
+---
+interface Props {
+    url: string
+    label: string
+}
+const { url, label } = Astro.props
+const style = Astro.routePattern === url ? 'current' : ''
+---
+<a href={url} id={style} >{label}</a>
+<style>
+#current {
+    color: red
+}
+</style>
